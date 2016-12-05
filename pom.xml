@@ -11,6 +11,10 @@
 	<artifactId>passport</artifactId>
 	<name>用户登录模块</name>
 	
+	<properties>
+		<core-version>1.1.0-SNAPSHOT</core-version>
+	</properties>
+	
 	<repositories>
 		<repository>
 			<id>ocs-nexus-snapshot</id>
@@ -30,9 +34,18 @@
 	        <scope>test</scope>
 	    </dependency>
 	    <dependency>
+		    <groupId>org.springframework.boot</groupId>
+		    <artifactId>spring-boot-starter-jetty</artifactId>
+		</dependency>
+	    <dependency>
 	        <groupId>com.jayway.jsonpath</groupId>
 	        <artifactId>json-path</artifactId>
 	        <scope>test</scope>
+	    </dependency>
+		<dependency>
+	        <groupId>com.ocs.microserver.parent</groupId>
+	        <artifactId>core</artifactId>
+	        <version>${core-version}</version>
 	    </dependency>
 	</dependencies>
 	
