@@ -22,7 +22,7 @@ url:/login
 type: post
 ```
 
-<kbd>返回数据的JSON格式</kbd>
+<kbd>返回数据的JSON格式，（引用com.ocs.ms.json.JsonResult类）</kbd>
 ```
 {
 "code":200,
@@ -38,7 +38,7 @@ url: /logout
 type: get
 ```
 
-<kbd>返回数据的JSON格式</kbd>
+<kbd>返回数据的JSON格式，（引用com.ocs.ms.json.JsonResult类）</kbd>
 ```
 {
 "code":200,
