@@ -36,9 +36,9 @@ url: /logout
 type: get
 
 返回数据的JSON格式：
-\{
+{
 "code":200,
 "message":"后台返回处理结果消息",
 "data":"如果不传入数据则留空"
-\}
+}
 ```
