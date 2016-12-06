@@ -16,12 +16,14 @@
 #### RESTFUL接口
 * **用户登录**
 
-```
 <kbd>暴露的接口及类型</kbd>
+```
 url:/login
 type: post
+```
 
 <kbd>返回数据的JSON格式</kbd>
+```
 {
 "code":200,
 "message":"后台返回处理结果消息",
