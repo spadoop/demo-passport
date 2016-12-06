@@ -13,12 +13,12 @@
 -------------
 #### RESTFUL接口
 * **用户登录**
-```sh
+``` sh
 url: /login
 type: post
 ```
 * **用户登出**
-```sh
+``` sh
 url: /logout
 type: get
 ```
