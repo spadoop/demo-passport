@@ -32,12 +32,14 @@ type: post
 ```
 * **用户登出**
 
-```
 <kbd>暴露的接口及类型</kbd>
+```
 url: /logout
 type: get
+```
 
 <kbd>返回数据的JSON格式</kbd>
+```
 {
 "code":200,
 "message":"后台返回处理结果消息",
