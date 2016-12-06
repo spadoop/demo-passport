@@ -17,11 +17,11 @@
 * **用户登录**
 
 ```
-暴露的接口及类型：
+<kbd>暴露的接口及类型</kbd>
 url:/login
 type: post
 
-返回数据的JSON格式：
+<kbd>返回数据的JSON格式</kbd>
 {
 "code":200,
 "message":"后台返回处理结果消息",
@@ -31,11 +31,11 @@ type: post
 * **用户登出**
 
 ```
-暴露的接口及类型：
+<kbd>暴露的接口及类型</kbd>
 url: /logout
 type: get
 
-返回数据的JSON格式：
+<kbd>返回数据的JSON格式</kbd>
 {
 "code":200,
 "message":"后台返回处理结果消息",
