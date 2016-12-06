@@ -9,16 +9,3 @@
 | <kbd>passwd</kbd> | varchar(32)      |    not null |    密码 |
 | <kbd>displayname</kbd> | varchar(50)      |    not null |    姓名 |
 
-#### <i class="icon-cog"></i>功能模块
--------------
-####RESTFUL接口
-* **用户登录**
-```sh
-url: /login
-type: post
-```
-* **用户登出**
-```sh
-url: /logout
-type: get
-```
