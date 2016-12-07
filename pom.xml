@@ -14,6 +14,7 @@
 		<core-version>1.1.0-SNAPSHOT</core-version>
 		<grpc.version>1.0.1</grpc.version><!-- CURRENT_GRPC_VERSION -->
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<os.detected.classifier>linux-x86_64</os.detected.classifier>
 	</properties>
 
 	<repositories>
@@ -104,7 +105,7 @@
 						version that grpc depends on. -->
 					<protocArtifact>com.google.protobuf:protoc:3.1.0:exe:${os.detected.classifier}</protocArtifact>
 					<pluginId>grpc-java</pluginId>
-					<pluginArtifact>io.grpc:protoc-gen-grpc-java:${grpc.version}:exe:windows-x86_64</pluginArtifact>
+					<pluginArtifact>io.grpc:protoc-gen-grpc-java:${grpc.version}:exe:${os.detected.classifier}</pluginArtifact>
 				</configuration>
 				<executions>
 					<execution>
