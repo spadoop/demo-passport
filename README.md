@@ -15,12 +15,34 @@
 -------------
 #### RESTFUL接口
 * **用户登录**
+
+<kbd>暴露的接口及类型</kbd>
 ```
-url: /login
+url:/login
 type: post
 ```
+
+<kbd>返回数据的JSON格式，（引用com.ocs.ms.json.JsonResult类）</kbd>
+```
+{
+"code":200,
+"message":"后台返回处理结果消息",
+"data":"如果不传入数据则留空"
+}
+```
 * **用户登出**
+
+<kbd>暴露的接口及类型</kbd>
 ```
 url: /logout
 type: get
+```
+
+<kbd>返回数据的JSON格式，（引用com.ocs.ms.json.JsonResult类）</kbd>
+```
+{
+"code":200,
+"message":"后台返回处理结果消息",
+"data":"如果不传入数据则留空"
+}
 ```
