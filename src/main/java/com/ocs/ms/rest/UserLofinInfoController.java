@@ -36,7 +36,7 @@ public class UserLofinInfoController {
 		System.out.println("username="+username +"    passwd="+passwd);
 		if(username == null || passwd == null)
 			return new JsonResult(ResultCode.PARAMS_ERROR, "参数错误", null);  
-		if(username.equals("") || passwd.equals(""))
+		if(username.equals("") || passwd.equals("")) 
 			return new JsonResult(ResultCode.PARAMS_ERROR, "参数错误", null);  
 		
 		UserLoginInfo user=(UserLoginInfo) LoginManager.getUserSession(req);
