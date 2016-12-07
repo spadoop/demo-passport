@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
@@ -10,11 +9,13 @@
 	</parent>
 	<artifactId>passport</artifactId>
 	<name>用户登录模块</name>
-	
+
 	<properties>
 		<core-version>1.1.0-SNAPSHOT</core-version>
+		<grpc.version>1.0.1</grpc.version><!-- CURRENT_GRPC_VERSION -->
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
-	
+
 	<repositories>
 		<repository>
 			<id>ocs-nexus-snapshot</id>
@@ -22,41 +23,57 @@
 			<url>http://192.168.1.253:8081/repository/maven-snapshots/</url>
 		</repository>
 	</repositories>
-	
+
 	<dependencies>
+
 		<dependency>
-	        <groupId>org.springframework.boot</groupId>
-	        <artifactId>spring-boot-starter-web</artifactId>
-	    </dependency>
-	    <dependency>
-	        <groupId>org.springframework.boot</groupId>
-	        <artifactId>spring-boot-starter-test</artifactId>
-	        <scope>test</scope>
-	    </dependency>
-	    <dependency>
-	        <groupId>com.jayway.jsonpath</groupId>
-	        <artifactId>json-path</artifactId>
-	        <scope>test</scope>
-	    </dependency>
+			<groupId>io.grpc</groupId>
+			<artifactId>grpc-netty</artifactId>
+			<version>${grpc.version}</version>
+		</dependency>
 		<dependency>
-	        <groupId>com.ocs.microserver.parent</groupId>
-	        <artifactId>core</artifactId>
-	        <version>${core-version}</version>
-	    </dependency>
+			<groupId>io.grpc</groupId>
+			<artifactId>grpc-protobuf</artifactId>
+			<version>${grpc.version}</version>
+		</dependency>
 		<dependency>
-				<groupId>mysql</groupId>
-				<artifactId>mysql-connector-java</artifactId>
+			<groupId>io.grpc</groupId>
+			<artifactId>grpc-stub</artifactId>
+			<version>${grpc.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.jayway.jsonpath</groupId>
+			<artifactId>json-path</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.ocs.microserver.parent</groupId>
+			<artifactId>core</artifactId>
+			<version>${core-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.mybatis.spring.boot</groupId>
 			<artifactId>mybatis-spring-boot-starter</artifactId>
 		</dependency>
-	    <dependency>
-   			 <groupId>org.springframework.boot</groupId>
-    		<artifactId>spring-boot-starter-jdbc</artifactId>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-jdbc</artifactId>
 		</dependency>
 	</dependencies>
-	
+
 	<build>
 		<plugins>
 			<plugin>
@@ -68,17 +85,45 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-resources-plugin</artifactId>
 			</plugin>
-			
+
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>exec-maven-plugin</artifactId>
 				<configuration>
-						<mainClass>com.ocs.ms.Application</mainClass>
-					</configuration>
+					<mainClass>com.ocs.ms.Application</mainClass>
+				</configuration>
 			</plugin>
-			
-			
-			
+
+			<plugin>
+				<groupId>org.xolstice.maven.plugins</groupId>
+				<artifactId>protobuf-maven-plugin</artifactId>
+				<version>0.5.0</version>
+				<configuration>
+					<!-- The version of protoc must match protobuf-java. If you don't depend 
+						on protobuf-java directly, you will be transitively depending on the protobuf-java 
+						version that grpc depends on. -->
+					<protocArtifact>com.google.protobuf:protoc:3.1.0:exe:${os.detected.classifier}</protocArtifact>
+					<pluginId>grpc-java</pluginId>
+					<pluginArtifact>io.grpc:protoc-gen-grpc-java:${grpc.version}:exe:${os.detected.classifier}</pluginArtifact>
+				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>compile</goal>
+							<goal>compile-custom</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
 		</plugins>
+		
+		<extensions>
+			<extension>
+				<groupId>kr.motd.maven</groupId>
+				<artifactId>os-maven-plugin</artifactId>
+				<version>1.4.1.Final</version>
+			</extension>
+		</extensions>
 	</build>
 </project>

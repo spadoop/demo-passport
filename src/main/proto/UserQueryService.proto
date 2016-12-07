@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+//option java_multiple_files = true;
+option java_package = "com.ocs.ms";
+option java_outer_classname = "UserProto";
+//option optimize_for = CODE_SIZE;
+
+package user;
+
+service UserQueryService {
+	rpc GetUserById(UserId) returns(User);
+}
+
+
+message UserId {
+	string id = 1;
+}
+message User{
+	string username = 1;
+}
