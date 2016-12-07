@@ -18,7 +18,7 @@ import com.ocs.ms.security.LoginManager;
 import com.ocs.ms.service.UserLoginInfoService;
 
 /**
- * 订单处理
+ *登录登出
  * 
  * @author jin
  * 2016-12-7

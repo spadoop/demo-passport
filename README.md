@@ -34,7 +34,7 @@ type: post
 
 <kbd>暴露的接口及类型</kbd>
 ```
-url: /logout
+url: /logout/findBy_username_passwd
 type: get
 ```
 
