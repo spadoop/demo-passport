@@ -1,7 +1,7 @@
 spring :  
   #数据库配置
   datasource : 
-    url : jdbc:mysql://192.168.1.253:3306/OrderDb
+    url : jdbc:mysql://192.168.1.253:3306/UserLogin
     username : root
     password : pass
     driver-class-name : com.mysql.jdbc.Driver
