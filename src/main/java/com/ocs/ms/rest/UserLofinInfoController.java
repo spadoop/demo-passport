@@ -15,6 +15,8 @@ import com.ocs.ms.entity.UserLoginInfo;
 import com.ocs.ms.json.JsonResult;
 import com.ocs.ms.json.ResultCode;
 import com.ocs.ms.security.LoginManager;
+import com.ocs.ms.security.UserSession;
+import com.ocs.ms.security.sessions.AssessorSession;
 import com.ocs.ms.service.UserLoginInfoService;
 
 /**
@@ -39,7 +41,7 @@ public class UserLofinInfoController {
 		if(username.equals("") || passwd.equals("")) 
 			return new JsonResult(ResultCode.PARAMS_ERROR, "参数错误", null);  
 		
-		UserLoginInfo user=(UserLoginInfo) LoginManager.getUserSession(req);
+		UserSession user= LoginManager.getUserSession(req);
 		
 		if(user!=null)
 			return new JsonResult(ResultCode.SUCCESS, "登录成功！", null);  
@@ -47,7 +49,11 @@ public class UserLofinInfoController {
 		UserLoginInfo resultEntity = service.findBy_username_passwd(username, passwd);
 		if(resultEntity !=null){
 			try {
-				LoginManager.login(req, rep, resultEntity);
+				UserSession userSession = new AssessorSession();
+				userSession.setAccount(resultEntity.getUsername());
+				userSession.setUserId(resultEntity.getId());
+				LoginManager.login(req, rep, userSession);
+				
 			} catch (Exception e) {
 				e.printStackTrace();
 			}

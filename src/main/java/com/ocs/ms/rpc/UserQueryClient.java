@@ -41,7 +41,7 @@ public class UserQueryClient {
 
 	public static void main(String[] args) throws Exception {
 		UserQueryClient client = new UserQueryClient("localhost", 10001);
-		String id = "1";
+		String id = "adfafa899a8fa9f89as9";
 		try {
 			System.out.println("get mesage: " + client.getUserById(id).getUsername());
 		} finally {
