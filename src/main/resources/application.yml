@@ -19,7 +19,7 @@ mybatis:
   mapperLocations: classpath:mapper/*.xml
   typeAliasesPackage : com.ocs.ms.entity 
 server : 
-  port : 9090
+  port : 8088
 redis :
   host : 192.168.1.253
   port : 6379
