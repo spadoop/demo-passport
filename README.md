@@ -18,7 +18,7 @@
 
 <kbd>暴露的接口及类型</kbd>
 ```
-url:/login
+url:/login/findBy_username_passwd
 type: post
 ```
 
@@ -34,7 +34,7 @@ type: post
 
 <kbd>暴露的接口及类型</kbd>
 ```
-url: /logout/findBy_username_passwd
+url: /logout
 type: get
 ```
 
