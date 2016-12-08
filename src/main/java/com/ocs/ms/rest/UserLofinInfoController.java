@@ -83,11 +83,7 @@ public class UserLofinInfoController {
 	//http://localhost:9090/logout?username=jin
 	@RequestMapping(value = "logout", produces = {"application/json;charset=UTF-8"})
 	@ResponseBody
-	public JsonResult logout(String username,HttpServletRequest req) {
-		System.out.println("username="+username);
-		if(username ==null)
-			return new JsonResult(ResultCode.PARAMS_ERROR, "参数错误", null); 
-		
+	public JsonResult logout(HttpServletRequest req) {
 		try {
 			LoginManager.logout(req);
 		} catch (Exception e) {

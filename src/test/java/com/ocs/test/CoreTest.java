@@ -12,11 +12,11 @@ import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
 
-import com.ocs.ms.Application;
+import com.ocs.ms.PassportApplication;
 import com.ocs.ms.rest.UserLofinInfoController;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@SpringBootTest(classes = Application.class)
+@SpringBootTest(classes = PassportApplication.class)
 @TestPropertySource(locations = { "classpath:application.yml" })
 @WebAppConfiguration
 public class CoreTest {
@@ -54,7 +54,7 @@ public class CoreTest {
         request.setMethod("POST");  
         String username="jin";
         request.addParameter("username", username);  
-        loginController.logout(username,request);  
+        loginController.logout(request);  
 	}
 	
 	

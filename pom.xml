@@ -14,7 +14,7 @@
 		<core-version>1.1.0-SNAPSHOT</core-version>
 		<grpc.version>1.0.2</grpc.version><!-- CURRENT_GRPC_VERSION -->
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<os.detected.classifier>windows-x86_64</os.detected.classifier>
+		<os.detected.classifier>linux-x86_64</os.detected.classifier>
 	</properties>
 
 	<repositories>

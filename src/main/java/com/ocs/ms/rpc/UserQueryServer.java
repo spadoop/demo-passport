@@ -2,7 +2,7 @@ package com.ocs.ms.rpc;
 
 import java.util.logging.Logger;
 
-import com.ocs.ms.Application;
+import com.ocs.ms.PassportApplication;
 import com.ocs.ms.UserProto.User;
 import com.ocs.ms.UserProto.UserId;
 import com.ocs.ms.UserQueryServiceGrpc;
@@ -48,7 +48,7 @@ public class UserQueryServer {
 	private static class UserQueryService extends UserQueryServiceGrpc.UserQueryServiceImplBase {
 		private User user = User.newBuilder().build();
 		UserName un;
-		NameMapper nameMapper = (NameMapper) Application.ac.getBean(NameMapper.class);
+		NameMapper nameMapper = (NameMapper) PassportApplication.ac.getBean(NameMapper.class);
 
 		@Override
 		public void getUserById(UserId request, StreamObserver<User> responseObserver) {
