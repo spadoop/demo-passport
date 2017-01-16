@@ -1,9 +1,9 @@
 /**
  * 
  */
-package com.ocs.ms.entity;
+package com.lysky.ms.entity;
 
-import com.ocs.ms.security.UserSession;
+import com.lysky.ms.security.UserSession;
 
 /**
  * @author jin 

@@ -1,4 +1,4 @@
-package com.ocs.ms.rest;
+package com.lysky.ms.rest;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
@@ -7,13 +7,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.ocs.ms.entity.UserLoginInfo;
-import com.ocs.ms.json.JsonResult;
-import com.ocs.ms.json.ResultCode;
-import com.ocs.ms.mapper.UserLoginInfoMapper;
-import com.ocs.ms.security.LoginManager;
-import com.ocs.ms.security.UserSession;
-import com.ocs.ms.utils.Assert;
+import com.lysky.ms.entity.UserLoginInfo;
+import com.lysky.ms.json.JsonResult;
+import com.lysky.ms.json.ResultCode;
+import com.lysky.ms.mapper.UserLoginInfoMapper;
+import com.lysky.ms.security.LoginManager;
+import com.lysky.ms.security.UserSession;
+import com.lysky.ms.utils.Assert;
 
 @RestController
 public class UserService {

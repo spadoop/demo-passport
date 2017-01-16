@@ -1,13 +1,13 @@
-package com.ocs.ms.rpc;
+package com.lysky.ms.rpc;
 
 import java.util.logging.Logger;
 
-import com.ocs.ms.PassportApplication;
-import com.ocs.ms.UserProto.User;
-import com.ocs.ms.UserProto.UserId;
-import com.ocs.ms.UserQueryServiceGrpc;
-import com.ocs.ms.entity.UserName;
-import com.ocs.ms.mapper.NameMapper;
+import com.lysky.ms.PassportApplication;
+import com.lysky.ms.UserQueryServiceGrpc;
+import com.lysky.ms.UserProto.User;
+import com.lysky.ms.UserProto.UserId;
+import com.lysky.ms.entity.UserName;
+import com.lysky.ms.mapper.NameMapper;
 
 import io.grpc.Server;
 import io.grpc.ServerBuilder;

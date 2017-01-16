@@ -1,4 +1,4 @@
-package com.ocs.test;
+package com.lysky.test;
 
 import javax.annotation.Resource;
 
@@ -12,8 +12,8 @@ import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
 
-import com.ocs.ms.PassportApplication;
-import com.ocs.ms.rest.UserLofinInfoController;
+import com.lysky.ms.PassportApplication;
+import com.lysky.ms.rest.UserLofinInfoController;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest(classes = PassportApplication.class)

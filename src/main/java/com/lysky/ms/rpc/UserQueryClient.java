@@ -1,12 +1,12 @@
-package com.ocs.ms.rpc;
+package com.lysky.ms.rpc;
 
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import com.ocs.ms.UserProto.User;
-import com.ocs.ms.UserProto.UserId;
-import com.ocs.ms.UserQueryServiceGrpc;
+import com.lysky.ms.UserQueryServiceGrpc;
+import com.lysky.ms.UserProto.User;
+import com.lysky.ms.UserProto.UserId;
 
 import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;

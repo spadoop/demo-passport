@@ -1,4 +1,4 @@
-package com.ocs.ms.entity;
+package com.lysky.ms.entity;
 
 public class UserName {
 	String username;

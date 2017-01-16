@@ -1,10 +1,10 @@
-package com.ocs.ms.mapper;
+package com.lysky.ms.mapper;
 
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 
-import com.ocs.ms.entity.UserName;
+import com.lysky.ms.entity.UserName;
 
 @Mapper
 public interface NameMapper {

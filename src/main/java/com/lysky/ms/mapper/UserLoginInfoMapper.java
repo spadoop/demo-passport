@@ -1,14 +1,14 @@
 /**
  * 
  */
-package com.ocs.ms.mapper;
+package com.lysky.ms.mapper;
 
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 
-import com.ocs.ms.entity.UserLoginInfo;
+import com.lysky.ms.entity.UserLoginInfo;
 
 /**
  * @author jin 2016-12-7

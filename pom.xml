@@ -3,7 +3,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
-		<groupId>com.ocs.microserver.parent</groupId>
+		<groupId>com.lysky.microserver.parent</groupId>
 		<artifactId>demo-parent</artifactId>
 		<version>1.0.0-SNAPSHOT</version>
 	</parent>
@@ -19,8 +19,8 @@
 
 	<repositories>
 		<repository>
-			<id>ocs-nexus-snapshot</id>
-			<name>OCS Nexus Repository</name>
+			<id>lysky-nexus-snapshot</id>
+			<name>lysky Nexus Repository</name>
 			<url>http://192.168.1.253:8081/repository/maven-snapshots/</url>
 		</repository>
 	</repositories>
@@ -57,9 +57,9 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
-			<groupId>com.ocs.microserver.parent</groupId>
+			<groupId>com.lysky.microserver.parent</groupId>
 			<artifactId>core</artifactId>
-			<version>${core-version}</version>
+			<version>1.1.0-SNAPSHOT</version>
 		</dependency>
 		<dependency>
 			<groupId>mysql</groupId>
@@ -91,7 +91,7 @@
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>exec-maven-plugin</artifactId>
 				<configuration>
-					<mainClass>com.ocs.ms.Application</mainClass>
+					<mainClass>com.lysky.ms.PassportApplication</mainClass>
 				</configuration>
 			</plugin>
 
@@ -116,9 +116,23 @@
 					</execution>
 				</executions>
 			</plugin>
+			
+			<plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
 
 		</plugins>
 		
+ 		
+
 		<extensions>
 			<extension>
 				<groupId>kr.motd.maven</groupId>

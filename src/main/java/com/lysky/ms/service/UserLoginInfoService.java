@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.ocs.ms.service;
+package com.lysky.ms.service;
 
 import java.util.UUID;
 
@@ -10,8 +10,8 @@ import javax.annotation.Resource;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.ocs.ms.entity.UserLoginInfo;
-import com.ocs.ms.mapper.UserLoginInfoMapper;
+import com.lysky.ms.entity.UserLoginInfo;
+import com.lysky.ms.mapper.UserLoginInfoMapper;
 
 /**
  * 

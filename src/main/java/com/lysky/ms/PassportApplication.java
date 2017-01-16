@@ -1,10 +1,10 @@
-package com.ocs.ms;
+package com.lysky.ms;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 
-import com.ocs.ms.rpc.UserQueryServer;
+import com.lysky.ms.rpc.UserQueryServer;
 
 @SpringBootApplication
 public class PassportApplication {
